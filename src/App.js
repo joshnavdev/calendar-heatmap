@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-import Day from './components/day';
-import './App.css';
+import CalendarHeatmap from './components/calendar-heatmap';
 
 
 class App extends Component {
   render() {
     return (
-      <Day postCount={5} />
+      <CalendarHeatmap />
     );
   }
 }

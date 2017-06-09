@@ -1,0 +1,100 @@
+.cal-heatmap {
+  display: inline-block;
+	user-select: none;
+	position: relative;
+	width: 1000px;
+}
+.cal-heatmap_day {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #f3f6f8;
+	background-color: #c8d7e1;
+	margin: 0;
+
+  &.is-hovered {
+    border-color: #00aacd;
+  }
+  &.is-outside-month {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: white;
+  }
+  &.is-after-today {
+    background-color: #d9e3ea;
+  }
+  &.is-level-1 {
+    &.blue{
+      background-color: #91e2fb;
+    }
+    &.green{
+      background-color: #c6e48b;
+    }
+  }
+  &.is-level-2 {
+    &.blue{
+      background-color: #00bef6;
+    }
+    &.green{
+      background-color: #7bc96f;
+    }
+  }
+  &.is-level-3 {
+    &.blue{
+      background-color: #0083a9;
+    }
+    &.green{
+      background-color: #239a3b;
+    }
+  }
+  &.is-level-4 {
+    &.blue{
+      background-color: #003443;
+    }
+    &.green{
+      background-color: #239a3b;
+    }
+  }
+}
+
+.cal-heatmap_week {
+  display: inline-block;
+  width: 15px;
+}
+
+.cal-heatmap_month {
+	font-size: 0;
+	display: inline-block;
+	white-space: normal;
+	margin: 0 4px;
+}
+
+.cal-heatmap_label {
+  text-align: center;
+	font-size: 17px;
+	color: darken( gray,10 );
+	margin-top: 10px;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}
+
+.cal-heatmap_container {
+  padding-top: 10px;
+	float: right;
+}
+
+.cal-heatmap_day-showers {
+  display: inline-block;
+  margin: 0;
+	padding: 0;
+	list-style-type: none;
+	padding: 2px 9px 0 5px;
+}
+
+.cal-heatmap_year {
+  position: relative;
+		top: 0;
+		left: 0;
+	display: block;
+	white-space: nowrap;
+	transition: left, 1s, ease-in-out;
+}

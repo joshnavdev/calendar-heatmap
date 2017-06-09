@@ -32,7 +32,7 @@ class Day extends React.Component {
 
 
   render = () => {
-    const { postCount, date = '05/05/2017', className = classnames('blue', 'is-level-2')} = this.props;
+    const { postCount, date = '05/05/2017', classNames = classnames('blue', 'is-level-2')} = this.props;
     const hoveredClass = {
       'is-hovered': this.state.hovered,
     };
@@ -49,7 +49,7 @@ class Day extends React.Component {
         <div
           onMouseEnter={this.mouseEnter}
           onMouseLeave={this.mouseLeave}
-          className={ classnames('post-trends_day', hoveredClass, className)}
+          className={ classnames('cal-heatmap_day', hoveredClass, classNames)}
         >
         </div>
       </Tooltip>
